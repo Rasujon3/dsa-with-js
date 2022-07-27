@@ -7,22 +7,19 @@ function getHigherAndLower(arr) {
   let lower = arr[0];
   // iterate the whole array
   for (let i = 0; i < arr.length; i++) {
+    // let's check is there has any error
     if (typeof arr[i] !== "number") {
       continue;
     }
+    // if higher variable has smaller number than our current number then value will be our current element
     if (higher < arr[i]) {
       higher = arr[i];
     }
+    // if lower variable has bigger number than our current number then value will be our current element
     if (lower > arr[i]) {
       lower = arr[i];
     }
   }
-  // let's check is there has any error
-  //
-  // if higher variable has smaller number than our current number then value will be our current element
-  //
-  // if lower variable has bigger number than our current number then value will be our current element
-  //
   //   return our higher variable and lower variable
   return higher - lower;
 }
