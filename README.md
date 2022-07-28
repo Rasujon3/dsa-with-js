@@ -19,3 +19,7 @@ i. Somoy er o kichu somosha royeche, ex-
 ## O(log n) & O(n) er moddhe kar complexity beshi?
 
 ans: O(log n) er complexity beshi. overall sobcheye beshi O(n!)
+
+## Linear Search
+
+- sojasuji giye khuje ber kore niya asha.
