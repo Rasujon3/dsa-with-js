@@ -29,4 +29,7 @@ ans: O(log n) er complexity beshi. overall sobcheye beshi O(n!)
 - assending order e thakte hobe.
 - start, middle, end
 - searching number middle er boro na choto?Boro hole dane, choto hole bam e jabe.
--
+
+## Insertion Sort
+
+- ager tar sathe compare hobe.
