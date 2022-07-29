@@ -17,4 +17,4 @@ function selectionSort(arr) {
 }
 
 console.log(selectionSort([0, 1, -1, 3]));
-// Time Complexity = O(n^2)
+// Time Complexity=O(n^2)
