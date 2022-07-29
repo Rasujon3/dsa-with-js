@@ -13,8 +13,10 @@
 
 var twoSum = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
+    // O(n)
     let remaining = target - nums[i];
     for (let j = i + 1; j < nums.length; j++) {
+      // O(n)
       if (remaining === nums[j]) {
         return [i, j];
       }
@@ -28,4 +30,5 @@ console.log(twoSum([2, 7, 11, 15], 18));
 // target = 6
 // [3,2,4]
 
-// Time Complexity = O(n^2)
+// Time Complexity = O(n*n = n^2)
+// Space Complexity = O(1)
