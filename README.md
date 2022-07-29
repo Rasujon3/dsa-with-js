@@ -23,3 +23,10 @@ ans: O(log n) er complexity beshi. overall sobcheye beshi O(n!)
 ## Linear Search
 
 - sojasuji giye khuje ber kore niya asha.
+
+## Binary Search
+
+- assending order e thakte hobe.
+- start, middle, end
+- searching number middle er boro na choto?Boro hole dane, choto hole bam e jabe.
+-
