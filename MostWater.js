@@ -2,16 +2,26 @@
 
 var maxArea = function (heights) {
   let totalWater = 0;
-  for (let i = 0; i < heights.length; i++) {
-    for (let j = i + 1; j < heights.length; j++) {
-      let height = Math.min(heights[i], heights[j]);
-      let width = j - i;
+  let firstPointer = 0;
+  let lastPointer = heights.length - 1;
 
-      let currentWater = height * width;
-      totalWater = Math.max(totalWater, currentWater);
+  while (firstPointer < lastPointer) {
+    let height = Math.min(heights[firstPointer], heights[lastPointer]);
+    let width = lastPointer - firstPointer;
+
+    let currentWater = height * width;
+
+    totalWater = Math.max(totalWater, currentWater);
+
+    if (heights[firstPointer] <= heights[lastPointer]) {
+      firstPointer++;
+    } else {
+      lastPointer--;
     }
   }
   return totalWater;
 };
 
 console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
+// TIme Complexity = O(n)
+// Space Complexity = O(1)
