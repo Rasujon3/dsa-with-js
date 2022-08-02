@@ -19,8 +19,38 @@ class Stack {
 }
 
 let stack = new Stack();
-console.log(stack.push(5));
-console.log(stack.push(10));
-console.log(stack.push(15));
-console.log(stack.lookup());
-console.log(stack.pop());
+// console.log(stack.push(5));
+// console.log(stack.push(10));
+// console.log(stack.push(15));
+// console.log(stack.lookup());
+// console.log(stack.pop());
+
+// another stack implementation
+
+class AnotherStack {
+  constructor() {
+    this.database = {};
+    this.count = 0;
+  }
+  push(value) {
+    this.count++;
+    this.database[this.count] = value;
+    return this.database;
+  }
+  pop() {
+    let deleteItem = this.database[this.count];
+    delete this.database[this.count];
+    this.count--;
+    return deleteItem;
+  }
+  peak() {
+    return this.database[this.count];
+  }
+}
+
+let stack1 = new AnotherStack();
+
+console.log(stack1.push(10));
+console.log(stack1.push(15));
+console.log(stack1.pop());
+console.log(stack1.peak());
