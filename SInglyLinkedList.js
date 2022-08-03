@@ -81,6 +81,17 @@ class SinglyLinkedList {
     }
     this.length++;
   }
+
+  showList() {
+    let arr = [];
+    let currentNode = this.head;
+
+    while (currentNode) {
+      arr.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    return arr;
+  }
 }
 
 let list = new SinglyLinkedList();
@@ -90,11 +101,16 @@ let list = new SinglyLinkedList();
 list.push(5);
 list.push(10);
 list.push(15);
-list.shift();
-list.shift();
-list.shift();
+// list.shift();
+// list.shift();
+// list.shift();
 list.unsShift(120);
 list.unsShift(140);
+
+list.push(40);
+list.unsShift("sujon");
+
+console.log(list.showList());
 
 // list.pop();
 // list.pop();
