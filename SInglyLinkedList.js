@@ -1,3 +1,10 @@
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
 class SinglyLinkedList {
   constructor() {
     this.head = null;
@@ -8,10 +15,8 @@ class SinglyLinkedList {
     return this.length === 0;
   }
   push(value) {
-    let newNode = {
-      value: value,
-      next: null,
-    };
+    let newNode = new Node(value);
+
     if (this.isEmply()) {
       this.head = newNode;
       this.tail = newNode;
@@ -64,6 +69,18 @@ class SinglyLinkedList {
 
     return currentNode;
   }
+
+  unsShift(value) {
+    let newNode = new Node(value);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length++;
+  }
 }
 
 let list = new SinglyLinkedList();
@@ -76,6 +93,8 @@ list.push(15);
 list.shift();
 list.shift();
 list.shift();
+list.unsShift(120);
+list.unsShift(140);
 
 // list.pop();
 // list.pop();
